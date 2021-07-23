@@ -30,8 +30,37 @@ sessionRoutes.route("/session/add").post(function (req, res) {
     };
     db_connect.collection("sessions").insertOne(myobj, function (err, res) {
       if (err) throw err;
-    });
+    }).then(res=> {
+        return res.insertedId;
+    }).catch(err => {
+        console.log("ERROR: trouble getting unique ID")
+    })});
+
+
+//GET all questions
+sessionRoutes.route("/questions").get(function (req, res) {
+    let db_connect = dbo.getDb("bonezone");
+    db_connect
+      .collection("questions")
+      .find({})
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+      });
   });
+
+//GET all questions by session ID
+sessionRoutes.route("/questions/id").get(function (req, res) {
+    let db_connect = dbo.getDb("bonezone");
+    db_connect
+      .collection("questions")
+      .find({})
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+      });
+  });
+
 
 
 
