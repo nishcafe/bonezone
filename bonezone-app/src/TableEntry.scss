@@ -1,0 +1,14 @@
+.table-entry {
+  display: grid;
+          // width: 100%;
+          grid-template-columns: 0.2fr 3fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          padding: 1em 0;
+          background: var(--bgcolor);
+          border-radius: 0.5em;
+          margin: 0.25em 0;
+          .number,
+          .question {
+            padding-left: 1em;
+          }
+}

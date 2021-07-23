@@ -1,0 +1,125 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --bgcolor: #e6e6e6;
+  --bgcolor-dark: #b1b1b1;
+  --bgcolor-dark2: #bdbdbd;
+}
+
+.main-page {
+  background-color: var(--bgcolor);
+  height: 100vh;
+}
+
+.main-page .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-page .header .title {
+  width: 80%;
+  font-size: 3em;
+  padding: 0.5em 1em;
+}
+
+.main-page .header .username {
+  font-size: 1.5em;
+}
+
+.main-page .header .exit {
+  background: transparent;
+  padding: 1em;
+  margin: 1em;
+  border: #ff4d4d solid 1px;
+  border-radius: 1em;
+  color: #ff4d4d;
+}
+
+.main-page .header .exit:active {
+  background-color: var(--bgcolor-dark);
+}
+
+.main-page .main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-page .main-section .discussion {
+  background-color: var(--bgcolor-dark);
+  width: 70%;
+  padding: 1em;
+  border-radius: 0.75em;
+  margin: 1em;
+}
+
+.main-page .main-section .discussion .title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.main-page .main-section .discussion .table .table-header {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 0.2fr 3fr 1fr 1fr 1fr;
+      grid-template-columns: 0.2fr 3fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.main-page .main-section .discussion .table .table-header .number-header,
+.main-page .main-section .discussion .table .table-header .question-header {
+  padding-left: 0.5em;
+}
+
+.main-page .main-section .discussion .table .table-entry {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 0.2fr 3fr 1fr 1fr 1fr;
+      grid-template-columns: 0.2fr 3fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 1em 0;
+  background: var(--bgcolor);
+  border-radius: 0.5em;
+  margin: 0.25em 0;
+}
+
+.main-page .main-section .discussion .table .table-entry .number,
+.main-page .main-section .discussion .table .table-entry .question {
+  padding-left: 1em;
+}
+
+.main-page .main-section .chat {
+  background-color: var(--bgcolor-dark);
+  padding: 1em;
+  border-radius: 0.75em;
+  margin: 1em;
+  width: 30%;
+  height: 70vh;
+}
+
+.main-page .main-section .chat .chat-header {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.main-page .main-section .chat .chat-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-page .main-section .chat .chat-view .messages {
+  height: 80%;
+}
+/*# sourceMappingURL=MainPage.css.map */
